@@ -1,0 +1,372 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website Design</title>
+    <!-- css file  -->
+    <link rel="stylesheet" href="static/style.css" />
+    <link rel="stylesheet" href="static/utlits.css" />
+    <!-- font awesome cdn  -->
+    <script
+      src="https://kit.fontawesome.com/c3171e834c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- header section start  -->
+    <header>
+      <div class="head-section layout">
+        <div class="nav-bar flex space-between align-center">
+          <div class="logo uppercase f-w-700 letter-spacing2">
+            <span>Ankit</span> YAdav
+          </div>
+          <div class="nav-links">
+            <ul class="flex f-w-600">
+              <li>
+                <a href="#about-tab" onclick="scrollToSection('about')"
+                  >About Me</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#portfolio-tab   "
+                  onclick="scrollToSection('portfolio')"
+                  >Portfolio</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Get in Touch</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- content  -->
+        <div class="content flex align-center">
+          <!-- left section  -->
+          <div class="left flex2">
+            <h3>Greetings!</h3>
+            <br>
+            <h4 class="uppercase letter-spacing2">I'm <span>Ankit</span></h4>
+            <br />
+            <p>
+              I am a professional web designer and learner . I have done
+              projects for my learning . I am a part time freelancer.
+            </p>
+            <br />
+            <p>
+              "Coding Dreams, Crafting Futures: Where Passion Meets Possibility"
+            </p>
+
+            <button class="btn btn2 my-t-20">
+              <a href="{% url 'download_resume' %}" download="resume.pdf"
+                >Download CV</a
+              >
+            </button>
+          </div>
+
+          <!-- right section  -->
+          <div class="right flex2">
+            <img class="size" src="asset/ankit.png" alt="girl png" />
+            <!-- <div class="color-box"></div>     -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- about section start  -->
+    <section id="about" class="about-me-sec">
+      <div class="about-sec layout">
+        <h3 class="uppercase pd-t-30 text-center">About Me</h3>
+        <hr class="w55 my-t-10" />
+
+        <div class="about-content flex justify-center align-center">
+          <!-- left side  -->
+          <div class="left flex2">
+            <h2 class="uppercase letter-spacing2">Web Desinger</h2>
+            <br>
+            <h3>Greetings!</h3>
+            <p class="my-t-10">
+              I am a forward-thinking Mechanical Engineer who found my passion
+              in the crossroads of innovation, technology, and design. My
+              journey began with a degree in Mechanical Engineering, where I not
+              only mastered the principles of mechanics but also led a dynamic
+              team in the manufacturing and design of an electric all-terrain
+              vehicle (e-ATV). This hands-on experience ignited a realization —
+              the world of technology, specifically IT, held boundless
+              opportunities to amplify my impact.
+            </p>
+            <br />
+            <p class="my-t-10">
+              Driven by the desire to broaden my skill set and contribute to the
+              ever-evolving landscape of technology, I made a deliberate shift
+              from core mechanical engineering to immerse myself in the realm of
+              Information Technology. Currently on a journey to master Full
+              Stack Development, I find joy in creating seamless, user-centric
+              digital experiences.
+            </p>
+            <br />
+            <p class="my-t-10">
+              My decision to embrace IT stems from the belief that marrying
+              mechanical engineering insights with cutting-edge technology is
+              the key to unlocking limitless possibilities. Join me on this
+              transformative journey as I amalgamate my mechanical roots with
+              the dynamic world of IT, creating solutions that resonate with
+              innovation and functionality.
+            </p>
+            <br />
+            <p class="my-t-10">Let's build the future together.</p>
+
+            
+          </div>
+          <!-- right side  -->
+          <div class="right flex3">
+            <img src="asset/LOGO1.png" alt="" />
+            <hr />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about section end  -->
+
+    <!-- portfolio section start  -->
+    <section id="portfolio" class="portfolio-sec">
+      <div class="portfolio layout">
+        <h3 class="uppercase text-center pd-30">Projects</h3>
+        <div
+          class="portfolio-parent flex justify-center align-center text-center">
+          <div class="portfolio-child">
+            <img src="#" alt="" />
+            <h3>Django E-commerce App</h3>
+            <p>
+              Dynamic e-commerce site using Django. Features user
+              authentication, product catalog, and responsive design.
+            </p>
+            <button class="btn btn2">Explore More</button>
+          </div>
+
+          <div class="portfolio-child">
+            <img src="#" alt="" />
+            <h3>Python: CRM App</h3>
+            <p>
+              CRM app for efficient customer management with features like
+              contact tracking.
+            </p>
+            <button class="btn btn2">Explore More</button>
+          </div>
+
+          <div class="portfolio-child">
+            <img src="#" alt="" />
+            <h3>SQL: Order Management DB</h3>
+            <p>
+              Created a MySQL database for hotel orders with efficient schema
+              design and complex queries.
+            </p>
+            <button class="btn btn2">Explore More</button>
+          </div>
+
+          <div class="portfolio-child">
+            <img src="#" alt="" />
+            <h3>HTML/CSS: Amazon Clone</h3>
+            <p>
+              Fully responsive Amazon clone with accurate HTML/CSS reproduction
+              and modern design principles.
+            </p>
+            <button class="btn btn2">Explore More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- portfolio section end  -->
+
+    <!-- experience section start  -->
+    <section class="experience-sec">
+      <div class="experience layout">
+        <h3 class="uppercase pd-30 text-center">Skills -Tech</h3>
+        <div
+          class="experience-details border-bottom flex space-between text-center">
+          <div class="col">
+            <h3>Programming Languages:</h3>
+            <p>Python</p>
+            <p>Java</p>
+          </div>
+
+          <div class="col">
+            <h3>Web Development:</h3>
+            <p>Django</p>
+            <p>HTML, CSS, JavaScript</p>
+          </div>
+
+          <div class="col">
+            <h3>Database Management:</h3>
+            <p>RDBMS</p>
+            <p>MySQL</p>
+          </div>
+          <div class="col">
+            <h3>Version Control:</h3>
+            <p>GitHub</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="experience-sec">
+      <div class="experience layout">
+        <h3 class="uppercase pd-30 text-center">Skills - Non-Tech</h3>
+        <div class="experience-details flex space-between text-center">
+          <div class="col">
+            <h3>Communication Skills:</h3>
+            <p>
+              Effective communication of<br />
+              technical concepts to diverse audiences.
+            </p>
+          </div>
+
+          <div class="col">
+            <h3>Problem Solving:</h3>
+            <p>
+              Ability to solve complex problems<br />
+              and challenges.
+            </p>
+          </div>
+
+          <div class="col">
+            <h3>Adaptability:</h3>
+            <p>
+              Quick adaptability to new<br />
+              technologies and methodologies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="experience-sec">
+      <div>
+        <h3 class="uppercase text-center"></h3>
+        <div
+          class="border-bottom experience-details-1 flex space-between text-center">
+          <div class="col">
+            <h3>Project Management:</h3>
+            <p>
+              Familiar with tools like Jira, <br />ensuring timely delivery and
+              meeting project goals.
+            </p>
+          </div>
+
+          <div class="col">
+            <h3>Learning Agility:</h3>
+            <p>
+              Quick learner, evidenced by the ability <br />to pick up new
+              languages and frameworks
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- experience section end  -->
+
+    <!-- testimonal section start  -->
+    <section class="testimonial-sec">
+      <div class="testimonial layout">
+        <h3 class="uppercase text-center pd-30">Testimonial</h3>
+        <div class="testimonial-parent flex space-between align-center">
+          <div class="testimonial-child">
+            <img src="#" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. In
+              sapiente esse, placeat quaerat expedita modi.
+            </p>
+            <div class="review-sec flex space-between">
+              <div class="icon-sec">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="name-sec text-center">
+                <h4>Danise Janson</h4>
+                <p class="designation">Senior Developer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-child">
+            <img src="#" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. In
+              sapiente esse, placeat quaerat expedita modi.
+            </p>
+            <div class="review-sec flex space-between">
+              <div class="icon-sec">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="name-sec text-center">
+                <h4>Lauren Scott</h4>
+                <p class="designation">Managing Director</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-child">
+            <img src="#" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. In
+              sapiente esse, placeat quaerat expedita modi.
+            </p>
+            <div class="review-sec flex space-between">
+              <div class="icon-sec">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="name-sec text-center">
+                <h4>Nicole Fusaro</h4>
+                <p class="designation">HR Manager</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- testimonal section end -->
+
+    <!-- contact-us section start  -->
+    <section class="contact-us-sec">
+      <div class="contact-us layout">
+        <h3 class="text-center uppercase pd-30">Get in Touch</h3>
+        <div class="contact-details flex space-between align-center">
+          <div class="left-sec">
+            <h5>Location</h5>
+            <p>Bhayander<br />Thane-401101<br />Maharashtra</p>
+          </div>
+          <div class="center-sec">
+            <h5>Contact No.</h5>
+            <p>Mobile No. +91 7021980233</p>
+            <h5>Email Id</h5>
+            <p>ankityadav1234567890i@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact-us section end  -->
+
+    <!-- footer section  -->
+    <footer>
+      <div class="footer-sec layout text-center">
+        <p>Copyright &copy; Ankit yadav | All Right Reserved</p>
+      </div>
+    </footer>
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>

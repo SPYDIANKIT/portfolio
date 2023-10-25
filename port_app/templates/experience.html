@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects and Experience</title>
+    <link rel="stylesheet" href="static/style.css" />
+    <link rel="stylesheet" href="static/utlits.css" />
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .mt-5 {
+            margin-top: 5%;
+        }
+
+        .project, .experience {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        h2, h3 {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head-section layout">
+          <div class="nav-bar flex space-between align-center">
+            <div class="logo uppercase f-w-700 letter-spacing2">
+              <span>Ankit</span> YAdav
+            </div>
+            <div class="nav-links">
+              <ul class="flex f-w-600">
+                  <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'experience' %}">Experience</a></li>
+              </ul>
+            </div>
+  
+            <button class="btn hire-me-btn">Hire Me</button>
+            <input type="checkbox" name="checkbox" id="click" />
+            <label for="click" class="menu-btn" id="menu">
+              <i class="fa-solid fa-bars"></i>
+            </label>
+          </div>
+          <!-- content  -->
+          
+  
+           
+      </header>
+
+    <!-- Main content -->
+    <div class="container mt-5">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of Project 1</p>
+        </div>
+
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of Project 2</p>
+        </div>
+
+        <h2 class="mt-5">Experience</h2>
+        <div class="experience">
+            <h3>Company ABC - Web Developer</h3>
+            <p>Duration: Jan 2022 - Present</p>
+            <p>Responsibilities and achievements</p>
+        </div>
+
+        <div class="experience">
+            <h3>Company XYZ - Software Engineer</h3>
+            <p>Duration: Jun 2020 - Dec 2021</p>
+            <p>Responsibilities and achievements</p>
+        </div>
+    </div>
+
+</body>
+</html>
+{% include 'footer.html' %}
